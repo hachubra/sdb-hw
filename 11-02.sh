@@ -11,3 +11,17 @@ set name 0 5 5
 taras
 get name
 
+docker run --name reist -d redis
+docker ps
+docker stop memc
+
+docker exec -it reist redis-cli
+
+
+set key1 one
+set key2 two
+set key3 three
+
+get key1 
+get key2
+get key3
