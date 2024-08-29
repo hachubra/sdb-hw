@@ -25,3 +25,11 @@ set key3 three
 get key1 
 get key2
 get key3
+quit
+
+docker exec -it reist redis-cli
+
+set key5 5
+incrby key5 5
+get key5
+quit
