@@ -11,3 +11,5 @@ curl -X GET 'localhost:9200/_cluster/health?pretty'
 
 
 #docker.io/library/elasticsearch:8.7.1
+
+docker compose -f "./11-03/docker-compose-el-kb.yaml" up
