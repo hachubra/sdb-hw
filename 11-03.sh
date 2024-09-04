@@ -10,6 +10,13 @@ docker run -p 127.0.0.1:9200:9200 -p 127.0.0.1:9300:9300 -e "discovery.type=sing
 curl -X GET 'localhost:9200/_cluster/health?pretty'
 
 
+
+
 #docker.io/library/elasticsearch:8.7.1
 
 docker compose -f "./11-03/docker-compose-el-kb.yaml" up
+
+
+docker pull logstash:7.17.23
+
+docker compose -f "./11-03/docker-compose-elk-ngnx.yaml" up
