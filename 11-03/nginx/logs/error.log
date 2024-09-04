@@ -622,3 +622,26 @@
 2024/09/04 14:13:24 [notice] 1#1: start worker process 30
 2024/09/04 14:13:24 [notice] 1#1: start worker process 31
 2024/09/04 14:16:37 [error] 30#30: *3 open() "/usr/share/nginx/html/ergey" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /ergey HTTP/1.1", host: "127.0.0.1"
+2024/09/04 14:32:39 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2024/09/04 14:32:39 [notice] 31#31: gracefully shutting down
+2024/09/04 14:32:39 [notice] 31#31: exiting
+2024/09/04 14:32:39 [notice] 29#29: gracefully shutting down
+2024/09/04 14:32:39 [notice] 31#31: exit
+2024/09/04 14:32:39 [notice] 29#29: exiting
+2024/09/04 14:32:39 [notice] 29#29: exit
+2024/09/04 14:32:39 [notice] 28#28: gracefully shutting down
+2024/09/04 14:32:39 [notice] 28#28: exiting
+2024/09/04 14:32:39 [notice] 28#28: exit
+2024/09/04 14:32:39 [notice] 30#30: gracefully shutting down
+2024/09/04 14:32:39 [notice] 30#30: exiting
+2024/09/04 14:32:39 [notice] 30#30: exit
+2024/09/04 14:32:39 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2024/09/04 14:32:39 [notice] 1#1: worker process 31 exited with code 0
+2024/09/04 14:32:39 [notice] 1#1: signal 29 (SIGIO) received
+2024/09/04 14:32:39 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2024/09/04 14:32:39 [notice] 1#1: worker process 29 exited with code 0
+2024/09/04 14:32:39 [notice] 1#1: signal 29 (SIGIO) received
+2024/09/04 14:32:39 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2024/09/04 14:32:39 [notice] 1#1: worker process 28 exited with code 0
+2024/09/04 14:32:39 [notice] 1#1: worker process 30 exited with code 0
+2024/09/04 14:32:39 [notice] 1#1: exit
