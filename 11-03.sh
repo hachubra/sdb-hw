@@ -20,3 +20,7 @@ docker compose -f "./11-03/docker-compose-el-kb.yaml" up
 docker pull logstash:7.17.23
 
 docker compose -f "./11-03/docker-compose-elk-ngnx.yaml" up
+
+docker pull elastic/filebeat:7.17.23
+
+docker compose -f "./11-03/docker-compose-ek-ngnx-fb.yaml" up
