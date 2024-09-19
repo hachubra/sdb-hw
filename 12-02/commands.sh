@@ -9,7 +9,8 @@ unzip sakila-db.zip
 ls
 
 
-docker exec -it mysql mysql -u sys_temp -p sys
+docker exec -it mysql bash 
+mysql -u sys_temp -p sys
 CREATE DATABASE sakila;
 exit
 
