@@ -12,6 +12,7 @@ ls
 docker exec -it mysql mysql -u sys_temp -p sys
 CREATE DATABASE sakila;
 exit
+
  mysql -u sys_temp -p sakila < /var/lib/mysql/dump/sakila-db/sakila-schema.sql 
  mysql -u sys_temp -p sakila < /var/lib/mysql/dump/sakila-db/sakila-data.sql 
 
@@ -20,4 +21,4 @@ exit
  mysql -u sys_temp -p sakila
 
  show tables;
- 
+
