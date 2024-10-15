@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  master1:
+    container_name: master1
+    image: mysql:8.4.2
+    restart: always
+    command:
+      - --mysql-native-password=ON
+    ports:
+      - "3310:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - ./mysql_master1.cnf:/etc/my.cnf
+      - ./mysql_master1.sql:/docker-entrypoint-initdb.d/start.sql      
+
+  master2:
+    container_name: master2
+    image: mysql:8.4.2
+    restart: always
+    command:
+      - --mysql-native-password=ON
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+    volumes:
+      - ./mysql_master2.cnf:/etc/my.cnf
+      - ./mysql_master2.sql:/docker-entrypoint-initdb.d/start.sql
+ 
