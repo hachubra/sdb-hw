@@ -15,7 +15,9 @@ CREATE FOREIGN TABLE books_1
     category_id int not null,
     author character varying not null,
     title character varying not null,
-    year int not null
+    year int not null,
+    pages int not null,
+    price bigint not null
 ) SERVER db_1_server
   OPTIONS (schema_name 'public', table_name 'pg_db');
 
@@ -35,7 +37,9 @@ CREATE FOREIGN TABLE books_2
     category_id int not null,
     author character varying not null,
     title character varying not null,
-    year int not null
+    year int not null,
+    pages int not null,
+    price bigint not null
 ) SERVER db_2_server
   OPTIONS (schema_name 'public', table_name 'pg_db');
 
@@ -54,7 +58,9 @@ CREATE FOREIGN TABLE books_3
     category_id int not null,
     author character varying not null,
     title character varying not null,
-    year int not null
+    year int not null,
+    pages int not null,
+    price bigint not null
 ) SERVER db_3_server
   OPTIONS (schema_name 'public', table_name 'pg_db');
 
