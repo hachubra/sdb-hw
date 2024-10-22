@@ -10,5 +10,5 @@ CREATE TABLE books
     price bigint not null
 );
 
-CREATE INDEX books_category_id_idx ON books USING btree(category_id)
+CREATE INDEX books_category_id_idx ON books USING btree(category_id);
 

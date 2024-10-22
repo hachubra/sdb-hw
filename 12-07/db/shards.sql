@@ -21,6 +21,13 @@ CREATE FOREIGN TABLE books_1
 ) SERVER db_1_server
   OPTIONS (schema_name 'public', table_name 'pg_db');
 
+CREATE FOREIGN TABLE users_1(
+    user_id bigint not null,
+    login TEXT NOT NULL,
+    password TEXT NOT NULL
+)SERVER db_1_server
+  OPTIONS (schema_name 'public', table_name 'pg_db');
+
 
 /* SHARD 2 */
 CREATE SERVER db_2_server
@@ -43,6 +50,15 @@ CREATE FOREIGN TABLE books_2
 ) SERVER db_2_server
   OPTIONS (schema_name 'public', table_name 'pg_db');
 
+CREATE FOREIGN TABLE users_2 (
+    user_id bigint not null,
+    name character varying not null,
+    middlename character varying not null,
+    lastname character varying not null,
+    dob date not null
+)SERVER db_2_server
+  OPTIONS (schema_name 'public', table_name 'pg_db');
+
 /* SHARD 3 */
 CREATE SERVER db_3_server
     FOREIGN DATA WRAPPER postgres_fdw
@@ -58,7 +74,7 @@ CREATE FOREIGN TABLE books_3
     category_id int not null,
     author character varying not null,
     title character varying not null,
-    year int not null,
+    year int not null, 
     pages int not null,
     price bigint not null
 ) SERVER db_3_server
@@ -73,6 +89,7 @@ FROM books_2
 UNION ALL
 SELECT *
 FROM books_3;
+
 
 CREATE RULE books_insert AS ON INSERT TO books
     DO INSTEAD NOTHING;

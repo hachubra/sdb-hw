@@ -11,3 +11,9 @@ CREATE TABLE books
 );
 
 CREATE INDEX books_category_id_idx ON books USING btree(category_id);
+
+CREATE TABLE users (
+    user_id bigint not null,
+    login TEXT NOT NULL,
+    password TEXT  NOT NULL
+);
