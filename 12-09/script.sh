@@ -18,3 +18,4 @@ psql "host=rc1b-8pmicg28wpx86q8d.mdb.yandexcloud.net,rc1d-2yvgdvzosrwjrezo.mdb.y
 #Для проверки успешности подключения выполните запрос:
 
 SELECT version();
+
